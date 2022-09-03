@@ -40,7 +40,7 @@ header{
 	margin:auto;
 }
 
-a {
+header a, footer a{
 	text-decoration: none;
 	color: #6B708D;
 }
@@ -49,9 +49,6 @@ header nav a{
 	margin: 0 1.5rem;
 }
 
-#current{
-	color: #072AC8;
-}
 
 .blueButton{
   background-color: #072AC8;
@@ -59,6 +56,7 @@ header nav a{
   padding: 0.75rem 1.8rem;
   /*height: 52px;
   box-sizing: border-box; */
+
 }
 
 h1, h2, h3, h4 {
@@ -104,92 +102,57 @@ h4{
 .caption2{
 	font-size: 0.65rem;
 }
-.landing{
-	display: flex;
-	box-sizing: border-box;
-	flex-direction: row;
-  margin: 0 11.8%;
-
-}
-.bgImg{
-	background-image: url('hero-section/hero-image.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  /*position: relative;*/
-}
-.landingItem{
-  width:50%;
- 
-/*
-	max-width: 570px;
-	background-position: 0 0;
-  background-size: cover;
-  
-  height: 650px;
-  padding-top: 50px;
-  */
-}
-
-.float1{
-	max-width: 10%;
-  /*position: absolute;
-  left: 10%;
-  bottom: 100px;*/
-}
-
-.clientsGrid{
-	display: grid;
-	row-gap: 2rem;
-	column-gap:  4rem;
-	grid-template-columns: repeat( auto-fit, minmax(6rem, 1fr));
-	align-items: center;
-	justify-items: center;
-	filter: grayscale(100%);
-}
 
 .container{
-	box-sizing: border-box;
-	margin: auto;	
 	width: 91.666%;
-	padding: 0 7.4%;
+	margin: auto;
+}
+
+.container2{
+	box-sizing: border-box;
+	width: 91.666%;
+	margin: auto;	
+	padding: 0 8%;
+}
+.container h3{
+	/*padding-left: 7.4%;*/
 }
 
 .boxContainer{
 	display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /*justify-content: space-evenly;
-  cuando la ventava sea peque cambio a este o center...
-   flex-flow: row wrap;
-   */
+  	justify-content:space-between;
+  	/*align-items: center; */
+  	flex-flow: row wrap;
+  	margin: auto;
+  	width: 88%;
 }
 
 .box{
 	max-width: 17rem;
 	min-height: 19rem;
 	box-sizing: border-box;
-  box-shadow: 0 39px 78px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-}
-
-.projectImg {
-  width: 17rem;
-  height: 12rem;
+  	box-shadow: 0 39px 78px rgba(0, 0, 0, 0.1);
+  	margin: 1rem;
+   	background-color: white;
 }
 
 .boxPadding{
-	padding: 1.5rem;
+	padding: 1.5rem;	
+}
+
+.projectImg {
+  max-width: 17rem;
+  object-fit: contain;
+  /*max-height: 12rem;*/
 }
 
 .round-div 
 {
-	background-color: #ECF7FF;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  display: flex;
+    background-color: #ECF7FF;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 1rem;
@@ -223,15 +186,6 @@ h4{
 	color: #FFC600;
 }
 
-.yellowBg{
-	background: #FFC600;
-}
-
-.projectBigImg{
-	object-fit: cover;
-	width: 100%;
-
-}
 footer{
 	display: flex;
 	align-items: center;
@@ -304,10 +258,6 @@ footer p{
 	
 	header nav a{
 		margin: 0 0.5rem;
-	}
-
-	.landing{
-		flex-direction: column-reverse;
 	}
 
 	#contact{

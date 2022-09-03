@@ -17,80 +17,124 @@
     <a href="project.html">Projects</a>
     <a href="#">Services</a>
   </nav>
-  <a id="contact" href="contact.html">Contact Us</a>
+  <a class="blueButton" id="contact" href="contact.html">Contact Us</a>
 </header>
 
 
 
-<!-- SECTION 1. Hero -->
-<h1>Empower Your Business With Stunning Design!</h1>
-<p #bodyRegular>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
-<a href="#">Get in touch</a>
-<a href="#">See our work</a>
-
+<!-- SECTION 1. Hero --> 
+<section class="landing">
+  <div class="landingItem">
+    <h1>Empower Your Business With Stunning Design!</h1>
+    <p #bodyRegular>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
+    <a class="blueButton" href="contact.html">Get in touch</a>
+    <a href="#">See our work</a>
+  </div>
+  <div class="landingItem bgImg">
+    <img class="float1" src="assets/hero-section/card-1.png">
+    <!--
+    <img src="assets/hero-section/card-2.png">-->
+  </div>
+</section>
 <!-- SECTION 2. Clients -->
-
+<section class="container">
+  <div class="clientsGrid">
+    <img src="assets/logos/airbnb-logo.svg">
+    <img src="assets/logos/google-logo.svg">
+    <img src="assets/logos/microsoft-logo.svg">
+    <img src="assets/logos/fedex-logo.svg">
+    <img src="assets/logos/amazon-logo.svg">
+  </div>
+</section>
 
 <!-- SECTION 3. Projects -->
-
-<h3>Recent Projects</h3>
-<p class="bodyMedium">Simplify</p>
-<p class="headlineRegular">UI Design & App Development</p>
-<a href="#" class="headlineRegular">Learn more</a>
-
-<p class="bodyMedium">Dashcoin</p>
-<p class="headlineRegular">Web Development</p>
-<a href="#" class="headlineRegular">Learn more</a>
-
-<p class="bodyMedium">Vectorify</p>
-<p class="headlineRegular">User Experience Design</p>
-<a href="#" class="headlineRegular">Learn more</a>
+<section class="container">
+  <h3>Recent Projects</h3>
+  <div class="boxContainer ">
+    <article class="box">
+      <img class="projectImg" src="assets/projects-section/1.jpg">
+      <div class="boxPadding">
+        <p class="bodyMedium">Simplify</p>
+        <p class="headlineRegular">UI Design & App Development</p>
+        <a href="#" class="headlineRegular">Learn more</a>
+    </div>
+    </article>
+    <article class="box">
+      <img class="projectImg" src="assets/projects-section/2.jpg">
+      <div class="boxPadding">
+      <p class="bodyMedium">Dashcoin</p>
+      <p class="headlineRegular">Web Development</p>
+      <a href="#" class="headlineRegular">Learn more</a>
+    </div>
+    </article>
+    <article class="box">
+      <img class="projectImg" src="assets/projects-section/3.jpg">
+      <div class="boxPadding">
+        <p class="bodyMedium">Vectorify</p>
+        <p class="headlineRegular">User Experience Design</p>
+        <a href="#" class="headlineRegular">Learn more</a>
+      </div>
+    </article>
+  </div> 
+</section>
 
 <!-- SECTION 4. Testimonials -->
-<h3>Hear What Our Clients Have to Say</h3>
-<p class="bodyMedium">"Circle helped us through every stage of our startup. We really enjoyed working with you."</p>
+<section class="container darkBg">
+  <h3>Hear What Our Clients Have to Say</h3>
+  <p class="bodyMedium">"Circle helped us through every stage of our startup. We really enjoyed working with you."</p>
 
-<p class="headlineRegular">Kristin Watson</p>
-<p class="caption2">Booking.com</p>
+  <p class="headlineRegular">Kristin Watson</p>
+  <p class="caption2">Booking.com</p>
+</section>
 
 <!-- SECTION 5. Services -->
+<section class="container">
 <h3>Our Services</h3>
+<div class="boxContainer">
+  <article class="box boxPadding">
+    <div class="round-div">
+      <img src="assets/services-section/1.svg">
+    </div>
+    <p class="bodyMedium ">User Interface Design</p>
+    <p class="bodyRegular">Circle provides you with a stunning user interface design that is accessible to everyone.</p>
+    <a href="#" class="headlineRegular">Learn more</a>
+  </article>
+  <article class="box boxPadding">
+    <div class="round-div">
+      <img src="assets/services-section/2.svg">
+    </div>
+    <p class="bodyMedium">User Experience Design</p>
+    <p class="bodyRegular">Circle always focuses on delivering the best user experience to your customers.</p>
+    <a href="#" class="headlineRegular">Learn more</a>
+  </article>
+  <article class="box boxPadding">
+    <div class="round-div">
+      <img src="assets/services-section/3.svg">
+    </div>
+    <p class="bodyMedium">Application Development</p>
+    <p class="bodyRegular">We develop high-quality mobile and web applications using the latest technology stack.</p>
+    <a href="#" class="headlineRegular">Learn more</a>
+  </article>
+</div>
 
-<p class="bodyMedium">User Interface Design</p>
-<p class="bodyRegular">Circle provides you with a stunning user interface design that is accessible to everyone.</p>
-<a href="#" class="headlineRegular">Learn more</a>
-
-<p class="bodyMedium">User Experience Design</p>
-<p class="bodyRegular">Circle always focuses on delivering the best user experience to your customers.</p>
-<a href="#" class="headlineRegular">Learn more</a>
-
-<p class="bodyMedium">Application Development</p>
-<p class="bodyRegular">We develop high-quality mobile and web applications using the latest technology stack.</p>
-<a href="#" class="headlineRegular">Learn more</a>
-
+</section>
 
 
 <!-- SECTION 6. CTA -->
-<h3>Do you have any questions?</h3>
-<p class="bodyRegular">Let us help you!</p>
+<section class="container yellowBg">
+  <h3>Do you have any questions?</h3>
+  <p class="bodyRegular">Let us help you!</p>
+</section>  
 <!-- Footer -->
 
 <footer>
   <div>
     <img id="logo" src="assets/logos/circle.svg">
-    <p class="headlineRegular">2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+    <p class="headlineRegular">2972 Westheimer Rd. Santa Ana,<br>
+    Illinois 85486 </p>
   </div>
-<!--
-  <ul id="footerNav"class="headlineRegular">
-    <li>Team</li>
-    <li>Services</li>
-    <li>About Us</li>
-    <li>Press</li>
-    <li>Projects</li>
-    <li>Privacy Policy</li>
-  </ul> 
--->
-  <nav>
+
+  <nav class="headlineRegular">
     <a href="#">Team</a>
     <a href="#">Services</a>
     <a href="#">About Us</a>
@@ -98,13 +142,6 @@
     <a href="project.html">Projects</a>
     <a href="#">Privacy Policy</a>    
   </nav>
-  <!--
-    <nav>
-    <a href="#">Press</a>
-    <a href="project.html">Projects</a>
-    <a href="#">Privacy Policy</a>    
-  </nav>
-  -->
 </footer>
 </body>
 </html>
