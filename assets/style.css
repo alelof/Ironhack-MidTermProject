@@ -1,12 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-body, h1, h2, h3, h4, p, a, ul{
+/*
+FONT SIZE PX TO REM
+PX 	REM
+60-	3
+50-	2.5
+40- 2
+24- 1.2
+20-	1
+17- 0.85	
+15- 0.75
+13- 0.65
+*/
+
+html {
+	font-size: 20px;
+	font-family: "Roboto", sans-serif;
+	color: #292E47;
+}
+
+body {
 	background: #F4F6FC;
+}
+
+body, h1, h2, h3, h4, p, a, ul{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: "Roboto", sans-serif;
-	color: #292E47;	
+}
+
+header{
+	display: flex;
+	align-items: center;
+/*	flex-flow: row wrap; */
+	justify-content: space-between;
+	box-sizing: border-box;
+	height: 6rem;
+	width: 75%;
+	margin:auto;
+
+}
+
+header a, footer a{
+	text-decoration: none;
+}
+
+header nav a{
+	margin: 0 1.5rem;
+}
+
+footer{
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap; 
+	justify-content: space-between;
+	box-sizing: border-box;
+	height: 12rem;
+	width: 75%;
+	margin:auto;
+}
+
+footer nav{
+  display: grid;
+  
+  grid-template-columns: auto auto auto;
+  height: 5.6rem;
+  grid-gap: 3.25rem 1rem;
+  /*
+  align-content: center;
+  gap: 10px;
+  padding: 10px;*/
+}
+
+#current {
+  color: #072AC8;
+}
+
+#contact{
+  background-color: #072AC8;
+  color: white;
+  padding: 0.75rem 1.8rem;
+  /*height: 52px;
+  box-sizing: border-box; */
+
 }
 
 h1, h2, h3, h4 {
@@ -14,16 +90,16 @@ h1, h2, h3, h4 {
 }
 
 h1{
-	font-size: 60px;
+	font-size: 3rem;
 }
 h2{
-	font-size: 50px;
+	font-size: 2.5rem;
 }
 h3{
-	font-size: 40px;
+	font-size: 2rem;
 }
 h4{
-	font-size: 24px;
+	font-size: 1.2rem;
 }
 
 .bodyMedium, .headlineMedium {
@@ -35,39 +111,99 @@ h4{
 } 
 
 .bodyMedium{
-	font-size: 24px;
+	font-size: 1.2rem;
 }
 .bodyRegular{
-	font-size: 20px;
+	font-size: 1rem;
 }
 .headlineMedium{
-	font-size: 17px;
+	font-size: 0.85rem;
 }
 .headlineRegular{
-	font-size: 17px;
+	font-size: 0.85rem;
 }
 .caption1{
-	font-size: 15px;
+	font-size: 0.75rem;
 }
 .caption2{
-	font-size: 13px;
+	font-size: 0.65rem;
 }
 
-
-/* Mobile */
-@media (max-width: 736px) {
+#footerNav{
 
 }
-
-/* Tablet laptop */ 
-@media (max-width: 980 px) {
- }
 
 /* Desktop & bigger ones */
-@media (max-width: 1280px) {
+@media screen and (max-width: 1600px) {
+	header{
+		width: 70%;	
+	}
+}
 
+@media screen and (max-width: 1024px) {
+	nav a{
+		margin: 0 1rem;
+	}
+}
+
+
+/* Tablet laptop */ 
+@media screen and (max-width: 980px) {
+	header{
+		width: 80%;	
+		height: 5rem;
+	}
+
+	nav a{
+		margin: 0 0.75rem; 
+	}
+
+	#contact{
+		padding: 0.6rem 1rem;
+	}
+ }
+
+ /* Landscape */
+@media screen and (max-width: 760px) {
+	header{
+		width: 95%;	
+		height: 4rem;
+	}
+	
+	nav a{
+		margin: 0 0.5rem;
+	}
+
+	#contact{
+		display: none;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+	header{
+		width: 90%;
+		height: 3rem;
+	}
+	
+	nav a{
+		margin: 0 0.25rem;
+	}
+
+	#contact{
+		display: none;
+	}
 }
 
 /*
-320px—480px for mobile devices, 481px-768px for iPads & tablets, 769px-1024px for small screens like laptop, 1025px-1200px for large screens like Desktops,
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 */
