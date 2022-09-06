@@ -36,20 +36,20 @@ header{
 	justify-content: space-between;
 	box-sizing: border-box;
 	height: 6rem;
-	width: 75%;
+	width: 76.38%;
 	margin:auto;
 }
 
 a {
 	text-decoration: none;
-	color: #6B708D;
+	/* color: #6B708D; */
 }
 
 header nav a{
 	margin: 0 1.5rem;
 }
 
-#current{
+.current{
 	color: #072AC8;
 }
 
@@ -91,9 +91,12 @@ h4{
 }
 .bodyRegular{
 	font-size: 1rem;
+	color: #6B708D;
+	line-height: 1.5rem;
 }
 .headlineMedium{
 	font-size: 0.85rem;
+	color: #6B708D;
 }
 .headlineRegular{
 	font-size: 0.85rem;
@@ -119,6 +122,7 @@ h4{
 }
 .landingItem{
   width:50%;
+}
  
 /*
 	max-width: 570px;
@@ -128,7 +132,6 @@ h4{
   height: 650px;
   padding-top: 50px;
   */
-}
 
 .float1{
 	max-width: 10%;
@@ -197,22 +200,23 @@ h4{
 
 .box p{
 	padding: 0.5rem 0;
-	line-height: 1.5rem;
 }
 
 .box a{
 	display: block;
 	padding-top: 1.5rem;
 	text-decoration: none;
-	color: #072AC8;
+	/*color: #072AC8;*/
 }
-
-.box .bodyRegular{
+/*
+.boxPadding .headlineRegular{
 	color: #6B708D;
 }
+*/
 
 .darkBg{
 	background: #292E47;
+	padding: 0;
 }
 
 .darkBg h3{
@@ -223,6 +227,31 @@ h4{
 	color: #FFC600;
 }
 
+.orbit{
+  background-image: url("testimonial-section/orbit2.png"); 
+	height: 31rem;
+	background-repeat: no-repeat;
+	background-position: center;
+ 	background-size: cover;
+/*
+ margin: auto;
+ background-position:center; fallback 
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  position: relative;
+  background-repeat: no-repeat;
+	 background-position: center;
+  */
+}
+
+.testimonials{
+	z-index:2;
+	position:relative;
+	top: -31rem;
+
+}
 .yellowBg{
 	background: #FFC600;
 }
@@ -232,15 +261,87 @@ h4{
 	width: 100%;
 
 }
+
+/* FORM */
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: stretch; 
+  margin-left: -2rem;
+ /* margin-top: -1.5rem;
+ padding-left: -2rem;
+  */
+}
+
+.twoColumns{
+	box-sizing: border-box;
+	width: 50%;
+	padding-left: 2rem;
+}
+
+.oneColumn{
+	width: 100%;
+	padding-left: 2rem;
+}
+	
+label {
+	display: block;
+	margin: 2rem 0 0.5rem 0;
+}
+	
+input[type="text"],
+input[type="email"],
+textarea {
+	display: block;
+	box-sizing: border-box;
+	border: none;
+	background: rgba(107, 112, 141, 0.1);
+	font-family: "Roboto", sans-serif;
+		font-weight: 400;
+	line-height: 1.4rem;
+	font-size: 0.85rem;
+	color: #6B708D;
+	padding: 1rem;
+	width: 100%;
+}
+
+#phone, #email{
+width: 100%;
+}
+
+::placeholder { 
+ 	color: #6B708D;
+}
+
+input[type="submit"]{
+		border: none;
+		background: #072AC8;
+	/*	display: inline-block;
+		text-decoration: none;*/
+		text-align: center;
+		font-family: "Roboto", sans-serif;
+		font-weight: 500;
+		font-size: 0.85rem;
+		color: white;
+		width: 100%;
+		height: 4rem;
+		margin-top: 2rem;
+		padding: 0;
+}
+
+
+
 footer{
 	display: flex;
 	align-items: center;
-	flex-flow: row wrap; 
+	flex-flow: row wrap-reverse; 
 	justify-content: space-between;
 	box-sizing: border-box;
-	height: 12rem;
-	width: 75%;
-	margin:auto;
+	height: 5.6rem;
+	width: 76.38%;
+	margin:  8.5rem auto 5rem auto;
 	color: #6B708D;
 }
 
@@ -251,8 +352,8 @@ footer nav{
   grid-gap: 3rem 6.25rem;
 }
 
-footer div{
-  height: 5.6rem;
+footer nav a{
+	color: #6B708D;
 }
 
 footer img{
@@ -260,21 +361,21 @@ footer img{
 }
 
 footer p{
-	padding-top: 0.75rem;
 	line-height: 1.2rem;
 }
 
 
 /* Desktop & bigger ones */
 @media screen and (max-width: 1600px) {
-	header{
-		width: 70%;	
-	}
+
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
 	header nav a{
 		margin: 0 1rem;
+	}
+	footer{
+		margin:  6rem auto 5rem auto;
 	}
 }
 
@@ -290,6 +391,22 @@ footer p{
 		margin: 0 0.75rem; 
 	}
 
+	footer{
+		width: 80%;
+		margin:  5rem auto 4rem auto;
+		justify-content: center;
+		height: auto;
+	}
+
+	footer div{
+  	margin: 3rem auto 0 auto;
+	}
+	footer img{
+		padding: 0 2rem 0 0;
+	}
+	footer p{
+		display: inline;
+	}
 	#contact{
 		padding: 0.6rem 1rem;
 	}
@@ -298,12 +415,28 @@ footer p{
  /* Landscape */
 @media screen and (max-width: 760px) {
 	header{
-		width: 95%;	
+		width: 85%;	
 		height: 4rem;
 	}
 	
 	header nav a{
 		margin: 0 0.5rem;
+	}
+
+	footer{
+		width: 85%;
+	}
+	
+	footer nav{
+		grid-gap: 3rem 5rem;
+	}
+
+	footer img{
+		padding: 0 0 1rem 0;
+	}
+	footer p{
+		display: block;
+		line-height: 2rem;
 	}
 
 	.landing{
@@ -313,12 +446,15 @@ footer p{
 	#contact{
 		display: none;
 	}
+
+	.twoColumns{
+		width: 100%;
+	}
 }
 
 /* Mobile */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
 	header{
-		width: 90%;
 		height: 3rem;
 	}
 	
@@ -326,8 +462,13 @@ footer p{
 		margin: 0 0.25rem;
 	}
 
-	#contact{
-		display: none;
+	footer{
+		margin:  4rem auto 2rem auto;
+	}
+	
+	footer nav{
+		height: auto;
+		grid-gap: 2rem 3.5rem;
 	}
 }
 
