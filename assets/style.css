@@ -57,8 +57,10 @@ header nav a{
   background-color: #072AC8;
   color: white;
   padding: 0.75rem 1.8rem;
-  /*height: 52px;
-  box-sizing: border-box; */
+  /*
+  height: 52px;
+  box-sizing: border-box;
+  */
 }
 
 h1, h2, h3, h4 {
@@ -89,40 +91,71 @@ h4{
 .bodyMedium{
 	font-size: 1.2rem;
 }
+
 .bodyRegular{
 	font-size: 1rem;
 	color: #6B708D;
 	line-height: 1.5rem;
 }
+
 .headlineMedium{
 	font-size: 0.85rem;
 	color: #6B708D;
 }
+
 .headlineRegular{
 	font-size: 0.85rem;
 }
+
 .caption1{
 	font-size: 0.75rem;
 }
+
 .caption2{
 	font-size: 0.65rem;
 }
+
 .landing{
 	display: flex;
 	box-sizing: border-box;
 	flex-direction: row;
   margin: 0 11.8%;
-
+  height: 32.5rem;
 }
-.bgImg{
+
+.landingText{
+  width:50%;
+}
+
+.landingImg{
+	width:50%;
 	background-image: url('hero-section/hero-image.png');
   background-repeat: no-repeat;
   background-size: contain;
-  /*position: relative;*/
+  
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0 0; 
+  grid-template-areas: 
+    "c1 c2"; 
 }
-.landingItem{
-  width:50%;
+
+.card1{
+	width: 100%;
+  grid-area: c1; 
+  align-self: start; 
+  justify-self: start;
 }
+
+.card2{
+	width: 100%;
+	grid-area: c2; 
+	align-self: end; 
+	justify-self: end;
+  
+}
+
  
 /*
 	max-width: 570px;
@@ -134,7 +167,7 @@ h4{
   */
 
 .float1{
-	max-width: 10%;
+	
   /*position: absolute;
   left: 10%;
   bottom: 100px;*/
@@ -155,12 +188,17 @@ h4{
 	margin: auto;	
 	width: 91.666%;
 	padding: 0 7.4%;
+	margin: 10rem auto auto auto;
 }
 
+.smallMargin{
+		margin-top: 8.25rem;
+}
 .boxContainer{
 	display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin-top: 3.5rem;
   /*justify-content: space-evenly;
   cuando la ventava sea peque cambio a este o center...
    flex-flow: row wrap;
@@ -216,42 +254,90 @@ h4{
 
 .darkBg{
 	background: #292E47;
-	padding: 0;
+	height: 31rem;
 }
 
 .darkBg h3{
 	color: white;
 }
-
+/*
 .darkBg .bodyMedium{
 	color: #FFC600;
-}
+}*/
 
 .orbit{
-  background-image: url("testimonial-section/orbit2.png"); 
+  background-image: url("testimonial-section/orbit.png"); 
 	height: 31rem;
 	background-repeat: no-repeat;
 	background-position: center;
  	background-size: cover;
-/*
- margin: auto;
- background-position:center; fallback 
-  background-position: 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 50px;
-  position: relative;
-  background-repeat: no-repeat;
-	 background-position: center;
-  */
+}
+
+.avatars {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-content: space-between;
+  height: inherit;
+  box-sizing: border-box;
+  padding: 3rem 0;
+}
+
+.avatars img{
+	width: 150px;
 }
 
 .testimonials{
-	z-index:2;
 	position:relative;
 	top: -31rem;
-
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
+
+.testimonials div{
+	margin-top: 5.2rem;
+}
+
+.testimonials .bodyMedium{
+	text-align: center;
+	line-height: 1.9rem;
+	color: #FFC600;
+}
+
+.clientInfo{
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0 0.5rem;  
+  align-items: center;
+  grid-template-areas: 
+    "pic p1"
+    "pic p2"; 
+}
+
+.picture { 
+	grid-area: pic; 
+  justify-self: flex-end; 
+}
+
+.p1 { 
+	grid-area: p1; 
+	color: #A2D6F9;
+}
+
+.p2 { 
+	grid-area: p2; 
+	color: #FFF;
+}
+
+.roundImg{
+	border-radius: 50%;
+	width: 50px;
+}
+
 .yellowBg{
 	background: #FFC600;
 }
@@ -259,7 +345,6 @@ h4{
 .projectBigImg{
 	object-fit: cover;
 	width: 100%;
-
 }
 
 /* FORM */
@@ -270,9 +355,10 @@ form{
   box-sizing: border-box;
   align-items: stretch; 
   margin-left: -2rem;
- /* margin-top: -1.5rem;
+ /*
+ margin-top: -1.5rem;
  padding-left: -2rem;
-  */
+ */
 }
 
 .twoColumns{
@@ -299,7 +385,7 @@ textarea {
 	border: none;
 	background: rgba(107, 112, 141, 0.1);
 	font-family: "Roboto", sans-serif;
-		font-weight: 400;
+	font-weight: 400;
 	line-height: 1.4rem;
 	font-size: 0.85rem;
 	color: #6B708D;
@@ -470,6 +556,18 @@ footer p{
 		height: auto;
 		grid-gap: 2rem 3.5rem;
 	}
+
+	.avatars{
+		display: none;
+	}
+
+	.testimonials{
+		top: 0;
+	}
+
+	.testimonials div{
+		margin-top: 2rem;
+	}	
 }
 
 /*
