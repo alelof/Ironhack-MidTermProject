@@ -156,7 +156,6 @@ h4{
   
 }
 
- 
 /*
 	max-width: 570px;
 	background-position: 0 0;
@@ -194,6 +193,7 @@ h4{
 .smallMargin{
 		margin-top: 8.25rem;
 }
+
 .boxContainer{
 	display: flex;
   flex-flow: row wrap;
@@ -260,14 +260,10 @@ h4{
 .darkBg h3{
 	color: white;
 }
-/*
-.darkBg .bodyMedium{
-	color: #FFC600;
-}*/
 
 .orbit{
+  height: 31rem;
   background-image: url("testimonial-section/orbit.png"); 
-	height: 31rem;
 	background-repeat: no-repeat;
 	background-position: center;
  	background-size: cover;
@@ -361,17 +357,17 @@ form{
  */
 }
 
+.oneColumn{
+	width: 100%;
+	padding-left: 2rem;
+}
+
 .twoColumns{
 	box-sizing: border-box;
 	width: 50%;
 	padding-left: 2rem;
 }
 
-.oneColumn{
-	width: 100%;
-	padding-left: 2rem;
-}
-	
 label {
 	display: block;
 	margin: 2rem 0 0.5rem 0;
@@ -384,13 +380,13 @@ textarea {
 	box-sizing: border-box;
 	border: none;
 	background: rgba(107, 112, 141, 0.1);
+	width: 100%;
+	padding: 1rem;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	line-height: 1.4rem;
 	font-size: 0.85rem;
 	color: #6B708D;
-	padding: 1rem;
-	width: 100%;
 }
 
 #phone, #email{
@@ -404,20 +400,16 @@ width: 100%;
 input[type="submit"]{
 		border: none;
 		background: #072AC8;
-	/*	display: inline-block;
-		text-decoration: none;*/
+		width: 100%;
+		height: 4rem;
+		margin-top: 2rem;
+		padding: 0;
 		text-align: center;
 		font-family: "Roboto", sans-serif;
 		font-weight: 500;
 		font-size: 0.85rem;
 		color: white;
-		width: 100%;
-		height: 4rem;
-		margin-top: 2rem;
-		padding: 0;
 }
-
-
 
 footer{
 	display: flex;
@@ -487,12 +479,15 @@ footer p{
 	footer div{
   	margin: 3rem auto 0 auto;
 	}
+	
 	footer img{
 		padding: 0 2rem 0 0;
 	}
+	
 	footer p{
 		display: inline;
 	}
+	
 	#contact{
 		padding: 0.6rem 1rem;
 	}
@@ -520,6 +515,7 @@ footer p{
 	footer img{
 		padding: 0 0 1rem 0;
 	}
+	
 	footer p{
 		display: block;
 		line-height: 2rem;
