@@ -9,12 +9,12 @@
 </head>
 <body>
 <!-- Header -->
-<header>
+<header class="headlineMedium">
   <img id="logo" src="assets/logos/circle.svg">  
   <!-- Nav -->
   <nav>
     <a href="index.html">Home</a>
-    <a id="current" href="#">Projects</a>
+    <a class="blueText" href="#">Projects</a>
     <a href="#">Services</a>
   </nav>
   <a class="blueButton" id="contact" href="contact.html">Contact Us</a>
@@ -23,10 +23,14 @@
 
 
 <!-- SECTION 1. Description -->
-<section class="container">
-  <h1>Simplify</h1>
-  <p class="#bodyMedium">UI Design & App Development</p> <!-- color: #6B708D; -->
-  <p class="#bodyRegular">Completed on <span style="color: #6B708D;">June 22, 2021</span></p>
+<section class="container smallMargin">
+    <h1>Simplify</h1>
+    <div class="projectInfo">
+      <p class="bodyMedium alternative">UI Design & App Development</p>
+      <p class="bodyRegular"><span>Completed on</span> June 22, 2021</p>
+    </div>
+</section>
+<section class="projectContainer">
   <img class="projectBigImg" src="assets/projects-section/1.jpg">
   <p class="bodyRegular">
   Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt quix duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
@@ -36,7 +40,7 @@
   </p>
 </section>
 <!-- SECTION 2. Other Projects -->
-<section class="container">
+<section class="container smallMargin">
   <h3>Other Projects</h3>
   <div class="boxContainer ">
     <article class="box">
@@ -67,7 +71,10 @@
 </section>
 
 <!-- SECTION 6. CTA -->
-<h3>/* CONTACT SECTION */</h3>
+<section class="container yellowBg">
+  <h3>Do you have any questions?</h3>
+  <p class="bodyRegular">Let us help you!</p>
+</section> 
 
 <!-- Footer -->
 <footer>
