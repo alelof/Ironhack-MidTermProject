@@ -279,7 +279,7 @@ h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
 
 .orbit{
   height: 31rem;
-  background-image: url("testimonial-section/orbit.png");
+  background-image: url('testimonial-section/orbit.png');
 	background-repeat: no-repeat;
 	background-position: center;
  	background-size: cover;
@@ -380,16 +380,20 @@ h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
 
 /* FORM */
 
+/**/
 #emailcta{
+	/*background-image: url('newsletter/mail.svg');
+	background-repeat: no-repeat;
+	background-position: left;*/
+	background: url('newsletter/mail.svg') no-repeat left;
 	background-color: white;
+	
+	background-origin: content-box;
 }
 
-.icon {
-  padding-left: 25px;
-  background: url("") no-repeat left;
-  background-size: 20px;
+#emailcta::placeholder{
+	padding-left:  2.5rem;	
 }
-
 
 form{
   display: flex;
@@ -492,7 +496,10 @@ footer p{
 
 /* Desktop & bigger ones */
 @media screen and (max-width: 1600px) {
-
+	.boxContainer{
+		justify-content: space-around;
+		flex-flow: nowrap;
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -508,7 +515,7 @@ footer p{
 	}
 
 	.boxContainer{
-		justify-content: space-around;
+		flex-flow: wrap;
 	}
 }
 
@@ -545,6 +552,9 @@ footer p{
 	
 	#contact{
 		padding: 0.6rem 1rem;
+	}
+	.boxContainer{
+		flex-flow: wrap;
 	}
  }
 

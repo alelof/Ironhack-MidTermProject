@@ -1,3 +1,5 @@
+const url = "https://database.deta.sh/v1/a0wwnrex/contactmessages/items";
+
 /*
 Todos los campos son requeridos. Al menos 50 caracteres para el message y que el teléfono empiece con +.
 Si es válido enviamos los datos al endpoint de Deta, limpiamos el formulario y mostramos un mensaje de confirmación.
@@ -29,9 +31,9 @@ function validateFields() {
       proceed = false;
       alertMsg += "- Phone number should start with +\n";
    }
-    if(message.length <= 50){
+    if(message.length > 50){
       proceed = false;
-      alertMsg += "- Message should be at least 50 characters long\n";
+      alertMsg += "- Message should not exceed 50 characters\n";
    }
    if(proceed == false){
       alert(alertMsg);
@@ -42,6 +44,41 @@ function validateFields() {
   if(proceed==true){
     alert("Yeeeeeeeeeeeeei\n ya puedo enviarlo");
     document.getElementById("myForm").reset();
+    sendFrom(name,email,phone,message);
   }
    
+}
+
+function sendFrom(nom,mai,pho,msg) {
+  alert("INSIDE SEND FORM");
+  const datos = {
+    name: nom,
+    email: mai,
+    phone: pho,
+    message: msg
+  };
+    
+  const body = {
+    item: datos
+  };
+
+  const fetchParams = {
+    method: 'POST',
+    headers: {
+      "Accept":'application/json',
+      "Content-Type":'application/json',
+      "X-API-Key": 'a0wwnrex_JeRhBybn5iFYziStv9d2M6Mchd2b4B4H'
+    },
+    body: JSON.stringify(body)
+  };
+
+  fecth(url, fetchParams)
+    .then(response =>{
+      if(response.ok) return response.JSON();
+
+    })
+    .then(json => {
+      console.log(json);
+    });
+
 }
