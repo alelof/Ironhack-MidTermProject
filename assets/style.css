@@ -48,18 +48,20 @@ header nav a{
   margin: 0.75rem 1.5rem;
   display: inline-block;
 }
-
+/*
 #logo{
   margin: 0.75rem 0;
   display: inline-block;
 }
+*/
 /* -- FONTS: WEIGHT, SIZE & LINE HEIGHT -- */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, a:hover {
 	font-weight: 700;
 }
 h1{
-	font-size: 3rem;
-	line-height: 3.5rem;
+	/*font-size: 3rem;*/
+	font-size: calc(32px + (70 - 32) * ((100vw - 520px) / (1440 - 520)));
+	/*line-height: 3.5rem;*/
 }
 h2{
 	font-size: 2.5rem;
@@ -104,7 +106,7 @@ h4{
 }
 
 /* -- FONTS: COLOR -- */
-h1, h3, span, .bodyMedium{
+h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
 	color: #292E47; /* Neutral dark */
 }
 .headlineMedium, .headlineRegular, .bodyRegular, .alternative{
@@ -124,18 +126,21 @@ h1, h3, span, .bodyMedium{
   display: inline-block;
 }
 
+.blueButton:hover{
+	background-color: #A2D6F9;;
+}
+
 .landing{
 	display: flex;
 	box-sizing: border-box;
 	flex-direction: row;
-  margin: 0 11.8%;
-  height: 32.5rem;
+  margin: 5.7rem 11.8%;
+  justify-content: space-between;
 }
 
 .landingText{
   box-sizing: border-box;
   width:50%;
-	margin: 5.7rem 0;
 	/*padding-right: 1rem 
   display: flex;
   flex-direction: column;
@@ -147,25 +152,31 @@ h1, h3, span, .bodyMedium{
 
 .description{
 	margin-top: 1.5rem;
-	padding-right: 5.8rem;
+	padding-right: 5rem;
 }
 
 .buttons{
-	margin-top: 2rem;
+	display: flex;
+	flex-flow: wrap;
+	align-items: center;
 }
 
+.buttons a{
+	margin-top: 2rem;
+	margin-right: 1.1rem;
+}
 .landingImg{
 	width:50%;
 	background-image: url('hero-section/hero-image.png');
   background-repeat: no-repeat;
   background-size: contain;
-  
   display: grid; 
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr; 
-  gap: 0 0; 
+  gap: 0 0; 	
   grid-template-areas: 
     "c1 c2"; 
+  height: 32.5rem;
 }
 
 .card1{
@@ -218,10 +229,6 @@ h1, h3, span, .bodyMedium{
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: 3.5rem;
-  /*justify-content: space-evenly;
-  cuando la ventava sea peque cambio a este o center...
-   flex-flow: row wrap;
-   */
 }
 
 .box{
@@ -272,7 +279,7 @@ h1, h3, span, .bodyMedium{
 
 .orbit{
   height: 31rem;
-  background-image: url("testimonial-section/orbit.png"); 
+  background-image: url("testimonial-section/orbit.png");
 	background-repeat: no-repeat;
 	background-position: center;
  	background-size: cover;
@@ -373,6 +380,17 @@ h1, h3, span, .bodyMedium{
 
 /* FORM */
 
+#emailcta{
+	background-color: white;
+}
+
+.icon {
+  padding-left: 25px;
+  background: url("") no-repeat left;
+  background-size: 20px;
+}
+
+
 form{
   display: flex;
   flex-wrap: wrap;
@@ -395,6 +413,7 @@ form{
 	width: 50%;
 	padding-left: 2rem;
 }
+
 
 label {
 	display: block;
@@ -454,7 +473,7 @@ footer{
 footer nav{
   display: grid;
   grid-template-columns: auto auto auto;
-  height: 5.6rem;
+ /* height: 5.6rem;*/
   grid-gap: 3rem 6.25rem;
 }
 
@@ -483,9 +502,13 @@ footer p{
 	footer{
 		margin:  6rem auto 5rem auto;
 	}
+	
+	.landingImg{
+		height: unset;
+	}
 
-	footer div{
-  	margin: 3rem auto 0 auto;
+	.boxContainer{
+		justify-content: space-around;
 	}
 }
 
@@ -541,7 +564,7 @@ footer p{
 	}
 	
 	footer nav{
-		grid-gap: 3rem 5rem;
+		grid-gap: 2rem 5rem;
 	}
 
 	footer img{
@@ -553,16 +576,39 @@ footer p{
 		line-height: 2rem;
 	}
 
-	.landing{
+.landing{
 		flex-direction: column-reverse;
-	}
+		align-items: center;
+		margin: 3rem auto;
+		padding: 0 3rem;
+	} 
 
+.landingText{
+	width:100%;
+}	
+.landingImg{
+	width: 100%;
+	background-position: center;
+	height: 24rem;
+}
+
+.card1, .card2{
+	width: 80%;
+}
 	#contact{
 		display: none;
 	}
 
 	.twoColumns{
 		width: 100%;
+	}
+
+	.avatars{
+		display: none;
+	}
+
+	.testimonials{
+		top: 0;
 	}
 }
 
@@ -582,9 +628,18 @@ footer p{
 	
 	footer nav{
 		height: auto;
-		grid-gap: 2rem 3.5rem;
+		grid-gap: 2rem 3rem;
 	}
 
+	.container{
+		/*padding: 0 1rem;*/
+		width: 100%;
+	}
+	
+	#clientsSection{
+		display: none;
+	}
+	
 	.avatars{
 		display: none;
 	}
@@ -595,8 +650,19 @@ footer p{
 
 	.testimonials div{
 		margin-top: 2rem;
-	}	
+	}
+
+	.landingImg{
+		height: 14rem;
+		width: 100%;
+		background-position: center;
 }
+	.card1, .card2{
+		width: 90%;
+	}
+
+}
+
 
 /*
 a:link, a:visited {
