@@ -9,48 +9,62 @@ document.getElementById('submitBtn').addEventListener('click',
 function(e){
   validateFields();
   e.preventDefault();
+  
 });
 
 
 function validateFields() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const message = document.getElementById('message').value;
+  const nam = document.getElementById('name').value;
+  const mai = document.getElementById('email').value;
+  const pho = document.getElementById('phone').value;
+  const msg = document.getElementById('message').value;
+  const missingData = document.getElementById('missingData');
+  const wrongPhone = document.getElementById('wrongPhone');
+  const wrongMsg = document.getElementById('wrongMsg');
+  const allOk = document.getElementById('allOk');
   let proceed = true;
 
   let alertMsg = '¡ERROR!\nPlease verify the following:\n\n';
-//  alert("name:"+name+"email:"+email+"phone:"+phone);
-//  alert("msg: "+message);
-  if (!name && !email && !phone && !message){
+  if (!nam && !mai && !pho && !msg){
       proceed = false;
-      alert("¡ERROR!\nPlease complete all the fields");
+      missingData.style.display = 'block';
+      missingData.scrollIntoView();
+      setTimeout(() => {
+        missingData.style.display = 'none';
+      }, 3000);      
   }
   else {
-    if(phone[0] != '+'){
+    if(pho[0] != '+'){
       proceed = false;
-      alertMsg += "- Phone number should start with +\n";
-   }
-    if(message.length > 50){
+      wrongPhone.style.display = 'block';
+      wrongPhone.scrollIntoView();  
+      setTimeout(() => {
+        wrongPhone.style.display = 'none';
+      }, 4000);
+      //alertMsg += "- Phone number should start with +\n";
+    }
+    if(msg.length > 50){
       proceed = false;
-      alertMsg += "- Message should not exceed 50 characters\n";
-   }
-   if(proceed == false){
-      alert(alertMsg);
+      wrongMsg.style.display = 'block';
+      wrongMsg.scrollIntoView();
+      setTimeout(() => {
+        wrongMsg.style.display = 'none';
+      }, 4000);
     }
   }
 
-//  if(okPhone == true && okMsg==true){
   if(proceed==true){
-    alert("Yeeeeeeeeeeeeei\n ya puedo enviarlo");
+    allOk.style.display = 'block';
+    allOk.scrollIntoView();
     document.getElementById("myForm").reset();
-    sendFrom(name,email,phone,message);
+
+    sendFrom(nam,mai,pho,msg);
   }
    
 }
 
 function sendFrom(nom,mai,pho,msg) {
-  alert("INSIDE SEND FORM");
+  alert("Hello from SendForm function");
   const datos = {
     name: nom,
     email: mai,
@@ -79,6 +93,8 @@ function sendFrom(nom,mai,pho,msg) {
     })
     .then(json => {
       console.log(json);
+      alert("wiiiiiiiiiii");
     });
-
 }
+
+
