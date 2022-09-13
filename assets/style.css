@@ -60,15 +60,16 @@ h1, h2, h3, h4, a:hover {
 }
 h1{
 	/*font-size: 3rem;*/
-	font-size: calc(32px + (70 - 32) * ((100vw - 520px) / (1440 - 520)));
+	font-size: calc(50px + (70 - 50) * ((100vw - 520px) / (1440 - 520)));
 	/*line-height: 3.5rem;*/
 }
 h2{
 	font-size: 2.5rem;
 }
 h3{
-	font-size: 2rem;
-	line-height: 2.4rem;
+	/*font-size: 2rem;
+	line-height: 2.4rem;*/
+	font-size: calc(32px + (40 - 32) * ((100vw - 520px) / (1440 - 520)));
 }
 h4{
 	font-size: 1.2rem;
@@ -106,7 +107,7 @@ h4{
 }
 
 /* -- FONTS: COLOR -- */
-h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
+h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder, .yellowBg p{
 	color: #292E47; /* Neutral dark */
 }
 .headlineMedium, .headlineRegular, .bodyRegular, .alternative{
@@ -336,7 +337,8 @@ h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
 
 .picture { 
 	grid-area: pic; 
-  justify-self: flex-end; 
+  /*justify-self: flex-end;*/ 
+  justify-self: center;
 }
 
 .p1 { 
@@ -356,6 +358,13 @@ h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
 
 .yellowBg{
 	background: #FFC600;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+
+.yellowBg h3, .yellowBg p{
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .projectInfo{
@@ -373,26 +382,62 @@ h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder{
 	width: 91.666%;
 }
 .projectBigImg{
-	object-fit: cover;
-	width: 100%;
-	
+    width: 100%;
+    max-height: 100%;
+    box-shadow: 0 39px 78px rgba(0, 0, 0, 0.25);
 }
+
+.imgDiv{
+	width: 100%;
+	height: 444px;
+	/*object-fit: scale-down;	*/	
+}
+ .projectText{
+ 	margin-top: 3.5rem;
+ 	font-size: calc(16px + (20 - 16) * ((100vw - 520px) / (1440 - 520)));
+ }
 
 /* FORM */
 
-/**/
+#subsForm{
+	flex-wrap: nowrap;
+	align-items: flex-end;
+  margin: 2rem auto 0 auto;
+  width: 55.26%;
+  height: 4rem;
+}
+/*
+.input-icon {
+  width: 66%;
+}
+          
+.input-icon > img {
+  position: absolute;
+  padding-left: 1.5rem;
+  padding-top: 1.3rem;
+}
+          
+#input-field {
+	background-color: white;
+	height: 4rem;
+	width: 95%;
+	padding-left: 3.5rem;
+}
+   */
+#subscribeBtn{
+	width: 34%;
+	height: inherit;
+} 
+
 #emailcta{
-	/*background-image: url('newsletter/mail.svg');
-	background-repeat: no-repeat;
-	background-position: left;*/
 	background: url('newsletter/mail.svg') no-repeat left;
 	background-color: white;
-	
 	background-origin: content-box;
-}
-
-#emailcta::placeholder{
-	padding-left:  2.5rem;	
+  margin-right: 0.5rem;
+	padding-left:  1.5rem;
+  width: 66%;
+  height: inherit;
+	text-indent: 2rem;
 }
 
 form{
@@ -401,10 +446,6 @@ form{
   box-sizing: border-box;
   align-items: stretch; 
   margin-left: -2rem;
- /*
- margin-top: -1.5rem;
- padding-left: -2rem;
- */
 }
 
 .oneColumn{
@@ -550,13 +591,28 @@ footer p{
 		display: inline;
 	}
 	
+	.avatars{
+		padding: 0;
+	}
+
+	#subsForm{
+		flex-wrap: wrap;
+	}
+	
+	#emailcta, #subscribeBtn{
+		width: 100%;
+		margin: 0 0 1rem 0;
+	}
+	
 	#contact{
 		padding: 0.6rem 1rem;
 	}
+	
 	.boxContainer{
 		flex-flow: wrap;
 	}
- }
+
+}
 
  /* Landscape */
 @media screen and (max-width: 760px) {
@@ -586,29 +642,48 @@ footer p{
 		line-height: 2rem;
 	}
 
-.landing{
-		flex-direction: column-reverse;
-		align-items: center;
-		margin: 3rem auto;
-		padding: 0 3rem;
-	} 
-
-.landingText{
-	width:100%;
-}	
-.landingImg{
-	width: 100%;
-	background-position: center;
-	height: 24rem;
-}
-
-.card1, .card2{
-	width: 80%;
-}
 	#contact{
 		display: none;
 	}
 
+	.landing{
+			flex-direction: column-reverse;
+			align-items: center;
+			margin: 3rem auto;
+			padding: 0 3rem;
+			text-align: center;
+		} 
+
+	.landingText{
+		width:100%;
+	}	
+
+	.description {
+    margin-top: 2rem;
+    padding-right: 0;
+	}
+	
+	.buttons{
+		justify-content: center;
+	}
+
+	.landingImg{
+		width: 100%;
+		background-position: center;
+		height: 24rem;
+	}	
+
+	.card1, .card2{
+		width: 80%;
+	}
+	
+	.clientsGrid {
+		column-gap: 1rem;
+	}
+
+.box{
+		margin-right: 0;
+	}
 	.twoColumns{
 		width: 100%;
 	}
@@ -620,12 +695,32 @@ footer p{
 	.testimonials{
 		top: 0;
 	}
+
+	.testimonials h3 {
+    text-align: center;
+	}
+	
+	.testimonials div {
+    margin-top: 4rem;
+	}
+	
+	.imgDiv{
+		height: unset;
+	}
+
+ 	.projectText{
+ 		margin-top: 2rem;
+ 	}
 }
+
+
 
 /* Mobile */
 @media screen and (max-width: 520px) {
 	header{
 		height: 3rem;
+		margin-top: 0.5rem;
+
 	}
 	
 	header nav a{
@@ -641,13 +736,27 @@ footer p{
 		grid-gap: 2rem 3rem;
 	}
 
-	.container{
-		/*padding: 0 1rem;*/
-		width: 100%;
+	.smallMargin {
+    margin-top: 2.5rem;
 	}
+
+	.container{
+		width: 100%;
+		margin: 3.5rem auto auto auto;
+		padding: 0 4%;
+	}
+
+	.boxContainer {
+		margin-top: 2em;
+  }
+  .yellowBg{
+  	padding-top: 3rem;
+  	padding-bottom: 7rem;
+  }
+
 	
 	#clientsSection{
-		display: none;
+		
 	}
 	
 	.avatars{
@@ -662,27 +771,50 @@ footer p{
 		margin-top: 2rem;
 	}
 
+	.landing {
+    margin: 2rem auto;
+    padding: 0 1rem;
+	}
+
 	.landingImg{
 		height: 14rem;
 		width: 100%;
 		background-position: center;
-}
+	}
 	.card1, .card2{
 		width: 90%;
 	}
 
+	.description {
+    margin-top: 1rem;
+	}
+
+	.buttons{
+		justify-content: center;
+    flex-direction: column;
+	}
+
+	.buttons a{
+		 margin: 1.5rem 0 0 0;
+
+	}
+	#subsForm {
+		width: 85%;
+		height: 2.5rem;
+		/*display: contents;*/
+	}
+	.projectInfo{
+		margin: 1rem 0 2rem 0;
+	}
+
+	.projectContainer {
+    padding: 0 4%;
+    width: 100%;
+	}
+	.projectBigImg {
+    box-shadow: 0 20px 50px rgb(0 0 0 / 20%);
+	}
+	.projectText {
+    margin-top: 1rem;
+	}
 }
-
-
-/*
-a:link, a:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid green;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-*/
