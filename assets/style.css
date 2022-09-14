@@ -385,7 +385,7 @@ h1, h3, span, .bodyMedium, a:hover, #emailcta, #emailcta::placeholder, .yellowBg
 }
 
 /*  SUBSCRIPTION FORM */
-#subsForm{
+.subsForm{
 	flex-wrap: nowrap;
 	align-items: flex-end;
   margin: 2rem auto 0 auto;
