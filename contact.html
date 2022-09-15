@@ -8,78 +8,83 @@
 </head>
 
 <body>
-<!-- Header -->
-<header class="headlineMedium">
-  <a href="index.html">
-    <img id="logo" src="assets/logos/circle.svg">
-  </a> 
-  <!-- Nav -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="project.html">Projects</a>
-    <a href="#">Services</a>
-  </nav>
-  <a class="blueButton" id="contact" href="contact.html">Contact Us</a>
-</header>
+
+  <!-- Header -->
+  <header class="headlineMedium">
+    <a href="index.html">
+      <img id="logo" src="assets/logos/circle.svg">
+    </a> 
+    <!-- Nav -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="#">Services</a>
+    </nav>
+    <a class="blueButton" id="contact" href="contact.html">Contact Us</a>
+  </header>
 
 
-<!-- SECTION 1. Hero -->
-<section class="container smallMargin">
-  <h1>Contact us</h1>
-  <form class="bodyRegular" id="myForm" method="POST">
-    <div class="oneColumn">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name">
+  <!-- Contact Us Form -->
+  <section class="container smallMargin">
+    <h1>Contact us</h1>
+    <form class="bodyRegular" id="myForm" method="POST">
+      <div class="oneColumn">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name">
+      </div>
+      <div class="twoColumns">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+      </div>
+      <div class="twoColumns">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+      </div>
+      <div class="oneColumn">
+        <label for="message">Message</label>
+        <textarea id="message" name="comment"  placeholder="Write your message here..." rows="8"></textarea> 
+      </div>
+      <div class="oneColumn">
+        <input type="submit" id="submitBtn" value="Submit" />
+      </div>
+    </form>
+    <div id="missingData" class="alertBox error">
+      <p class="bodyRegular"><span>Error:</span> Please complete all the fields.</p>
     </div>
-    <div class="twoColumns">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email address">
+    <div id="wrongMail" class="alertBox error">
+      <p class="bodyRegular"><span>Error:</span> Incorrect Email format</p>
     </div>
-    <div class="twoColumns">
-      <label for="phone">Phone</label>
-      <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+    <div id="wrongPhone" class="alertBox error">
+      <p class="bodyRegular"><span>Error:</span> Phone number should start with <i>+</i></p>
     </div>
-    <div class="oneColumn">
-      <label for="message">Message</label>
-      <textarea id="message" name="comment"  placeholder="Write your message here..." rows="8"></textarea> 
+    <div id="wrongMsg" class="alertBox error">
+      <p class="bodyRegular"><span>Error:</span> Message should not exceed 50 characters.</p>
     </div>
-    <div class="oneColumn">
-      <input type="submit" id="submitBtn" value="Submit" />
-    </div>
-  </form>
-  <div id="missingData" class="alertBox error">
-    <p class="bodyRegular"><span>Error:</span> Please complete all the fields.</p>
-  </div>
-  <div id="wrongPhone" class="alertBox error">
-    <p class="bodyRegular"><span>Error:</span> Phone number should start with <i>+</i></p>
-  </div>
-  <div id="wrongMsg" class="alertBox error">
-    <p class="bodyRegular"><span>Error:</span> Message should not exceed 50 characters.</p>
-  </div>
-  <div id="allOk" class="alertBox success">
-    <p class="bodyRegular"><span>Sucess:</span> Thank you for contacting us</p>
-  </div>  
-</section>
+    <div id="allOk" class="alertBox success">
+      <p class="bodyRegular"><span>Sucess:</span> Thank you for contacting us</p>
+    </div>  
+  </section>
 
-<!-- Footer -->
-<footer>
-  <div>
-  <a href="index.html">
-    <img id="logo" src="assets/logos/circle.svg">
-  </a>
-    <p class="headlineRegular">2972 Westheimer Rd. Santa Ana,</p>
-    <p class="headlineRegular">Illinois 85486 </p>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <div>
+      <a href="index.html">
+        <img id="logo" src="assets/logos/circle.svg">
+      </a>
+      <p class="headlineRegular">2972 Westheimer Rd. Santa Ana,</p>
+      <p class="headlineRegular">Illinois 85486 </p>
+    </div>
 
-  <nav class="headlineRegular">
-    <a href="#">Team</a>
-    <a href="#">Services</a>
-    <a href="#">About Us</a>
-    <a href="#">Press</a>
-    <a href="project.html">Projects</a>
-    <a href="#">Privacy Policy</a>    
-  </nav>
-</footer>
-<script type="text/javascript" src="assets/contact.js"></script>
+    <nav class="headlineRegular">
+      <a href="#">Team</a>
+      <a href="#">Services</a>
+      <a href="#">About Us</a>
+      <a href="#">Press</a>
+      <a href="project.html">Projects</a>
+      <a href="#">Privacy Policy</a>    
+    </nav>
+  </footer>
+  
+  <script type="text/javascript" src="assets/contact.js"></script>
 </body>
 </html>
