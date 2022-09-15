@@ -615,7 +615,7 @@ footer img{
 		padding: 0;
 	}
 
-	#subsForm{
+	.subsForm{
 		flex-wrap: wrap;
 	}
 	
@@ -846,8 +846,7 @@ footer img{
 		margin: 1.5rem 0 0 0;
 	}
 
-	#subsForm {
-		flex-wrap: wrap;
+	.subsForm {
 		width: 85%;
 		height: 2.5rem;
 	}
