@@ -847,6 +847,7 @@ footer img{
 	}
 
 	#subsForm {
+		flex-wrap: wrap;
 		width: 85%;
 		height: 2.5rem;
 	}
